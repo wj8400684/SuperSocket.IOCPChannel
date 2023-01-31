@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Nullable>enable</Nullable>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+        <LangVersion>11.0</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SuperSocket.IOCPChannel\SuperSocket.IOCPChannel.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="SuperSocket.Server" Version="2.0.0-beta.13" />
+    </ItemGroup>
+
+</Project>
