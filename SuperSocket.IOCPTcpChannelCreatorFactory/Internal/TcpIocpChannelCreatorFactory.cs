@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using SuperSocket.Channel;
-using SuperSocket.IOCPChannel;
+using SuperSocket.IOCPTcpChannel;
 using SuperSocket.ProtoBase;
 using SuperSocket.Server;
 

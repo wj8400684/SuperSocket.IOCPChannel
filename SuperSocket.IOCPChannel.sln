@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSocket.IOCPChannel", "SuperSocket.IOCPChannel\SuperSocket.IOCPChannel.csproj", "{261994A0-5475-41C4-945A-F86AE0831176}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperSocket.IOCPTcpChannelCreatorFactory", "SuperSocket.IOCPTcpChannelCreatorFactory\SuperSocket.IOCPTcpChannelCreatorFactory.csproj", "{694E5397-6EDC-4E9B-B828-78347106D020}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperSocket.IOCPTcpChannelCreatorFactory", "SuperSocket.IOCPTcpChannelCreatorFactory\SuperSocket.IOCPTcpChannelCreatorFactory.csproj", "{694E5397-6EDC-4E9B-B828-78347106D020}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperSocket.IOCPTcpChannel", "SuperSocket.IOCPTcpChannel\SuperSocket.IOCPTcpChannel.csproj", "{44FF2E3B-6EB2-4C19-BCB2-5AF4A4ACCC85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{261994A0-5475-41C4-945A-F86AE0831176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{261994A0-5475-41C4-945A-F86AE0831176}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{261994A0-5475-41C4-945A-F86AE0831176}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{261994A0-5475-41C4-945A-F86AE0831176}.Release|Any CPU.Build.0 = Release|Any CPU
 		{694E5397-6EDC-4E9B-B828-78347106D020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{694E5397-6EDC-4E9B-B828-78347106D020}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{694E5397-6EDC-4E9B-B828-78347106D020}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{694E5397-6EDC-4E9B-B828-78347106D020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44FF2E3B-6EB2-4C19-BCB2-5AF4A4ACCC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44FF2E3B-6EB2-4C19-BCB2-5AF4A4ACCC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44FF2E3B-6EB2-4C19-BCB2-5AF4A4ACCC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44FF2E3B-6EB2-4C19-BCB2-5AF4A4ACCC85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SuperSocket.IOCPChannel;
+namespace SuperSocket.IOCPTcpChannel;
 
 public sealed class IOCPTcpPipeChannel<TPackageInfo> : PipeChannel<TPackageInfo>
 {

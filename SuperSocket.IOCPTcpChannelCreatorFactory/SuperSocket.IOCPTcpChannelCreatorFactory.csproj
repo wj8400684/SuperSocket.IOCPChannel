@@ -7,7 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SuperSocket.IOCPChannel\SuperSocket.IOCPChannel.csproj" />
+      <ProjectReference Include="..\SuperSocket.IOCPChannel\SuperSocket.IOCPTcpChannel.csproj" />
+      <ProjectReference Include="..\SuperSocket.IOCPTcpChannel\SuperSocket.IOCPTcpChannel.csproj" />
     </ItemGroup>
 
     <ItemGroup>

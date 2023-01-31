@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.IO.Pipelines;
 using System.Threading;
 
-namespace SuperSocket.IOCPChannel;
+namespace SuperSocket.IOCPTcpChannel;
 
 internal sealed class SocketSenderPool : IDisposable
 {

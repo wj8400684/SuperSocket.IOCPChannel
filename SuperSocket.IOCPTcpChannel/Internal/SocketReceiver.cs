@@ -3,7 +3,7 @@ using System.IO.Pipelines;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 
-namespace SuperSocket.IOCPChannel;
+namespace SuperSocket.IOCPTcpChannel;
 
 internal sealed class SocketReceiver : SocketAwaitableEventArgs
 {

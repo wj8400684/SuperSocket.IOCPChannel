@@ -7,7 +7,7 @@ using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
-namespace SuperSocket.IOCPChannel;
+namespace SuperSocket.IOCPTcpChannel;
 
 internal sealed class SocketSender : SocketAwaitableEventArgs
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace SuperSocket.IOCPChannel;
+namespace SuperSocket.IOCPTcpChannel;
 
 internal static class BufferExtensions
 {
