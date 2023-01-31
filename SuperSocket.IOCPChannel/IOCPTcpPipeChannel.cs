@@ -25,7 +25,7 @@ public sealed class IOCPTcpPipeChannel<TPackageInfo> : PipeChannel<TPackageInfo>
     /// <param name="options">配置信息</param>
     /// <param name="pipeScheduler">包调度类型 PipeScheduler.ThreadPool PipeScheduler.Inline new IOQueue()</param>
     public IOCPTcpPipeChannel(Socket socket, IPipelineFilter<TPackageInfo> pipelineFilter, ChannelOptions options,
-        PipeScheduler? pipeScheduler = null) :
+        PipeScheduler? pipeScheduler = default) :
         base(pipelineFilter, options)
     {
         _socket = socket;
