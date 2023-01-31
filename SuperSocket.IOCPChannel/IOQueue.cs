@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace SuperSocket.IOCPChannel;
 
-internal sealed class IOQueue : PipeScheduler, IThreadPoolWorkItem
+public sealed class IOQueue : PipeScheduler, IThreadPoolWorkItem
 {
     private readonly ConcurrentQueue<Work> _workItems = new ConcurrentQueue<Work>();
     private int _doingWork;

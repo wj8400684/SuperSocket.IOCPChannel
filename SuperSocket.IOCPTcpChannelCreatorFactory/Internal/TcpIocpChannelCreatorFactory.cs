@@ -12,7 +12,7 @@ using SuperSocket.Server;
 
 namespace SuperSocket.IOCPTcpChannelCreatorFactory;
 
-public sealed class TcpIocpChannelCreatorFactory : TcpChannelCreatorFactory, IChannelCreatorFactory
+internal sealed class TcpIocpChannelCreatorFactory : TcpChannelCreatorFactory, IChannelCreatorFactory
 {
     public TcpIocpChannelCreatorFactory(IServiceProvider serviceProvider)
         : base(serviceProvider)
