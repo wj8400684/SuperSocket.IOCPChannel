@@ -11,7 +11,7 @@ namespace SuperSocket.IOCPTcpChannel;
 
 public sealed class IOCPTcpPipeChannel<TPackageInfo> : PipeChannel<TPackageInfo>
 {
-    private Socket? _socket = null!;
+    private Socket? _socket;
     private SocketSender? _sender;
     private readonly SocketReceiver _receiver;
     private readonly SocketSenderPool _socketSenderPool;
