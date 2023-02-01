@@ -29,7 +29,7 @@ public class IOCPTcpEasyClient<TPackage, TSendPackage> : IOCPTcpEasyClient<TPack
     }
 }
 
-public class IOCPTcpEasyClient<TPackage> : EasyClient<TPackage>, IEasyClient<TPackage>
+public class IOCPTcpEasyClient<TPackage> : EasyClient<TPackage>
     where TPackage : class
 {
     private IPipelineFilter<TPackage> _pipelineFilter;
