@@ -15,7 +15,6 @@ public sealed class IOCPTcpPipeChannel<TPackageInfo> : PipeChannel<TPackageInfo>
     private SocketSender? _sender;
     private readonly SocketReceiver _receiver;
     private readonly SocketSenderPool _socketSenderPool;
-    private readonly PipeScheduler _socketScheduler; // : PipeScheduler.ThreadPool PipeScheduler.Inline new IOQueue()
 
     /// <summary>
     /// 
@@ -28,10 +27,11 @@ public sealed class IOCPTcpPipeChannel<TPackageInfo> : PipeChannel<TPackageInfo>
         PipeScheduler? pipeScheduler = default) :
         base(pipelineFilter, options)
     {
+        var socketScheduler = pipeScheduler ?? PipeScheduler.ThreadPool;
+        
         _socket = socket;
-        _socketScheduler = pipeScheduler ?? PipeScheduler.ThreadPool;
-        _receiver = new SocketReceiver(_socketScheduler);
-        _socketSenderPool = new SocketSenderPool(_socketScheduler);
+        _receiver = new SocketReceiver(socketScheduler);
+        _socketSenderPool = new SocketSenderPool(socketScheduler);
     }
 
     protected override async ValueTask<int> FillPipeWithDataAsync(Memory<byte> memory,

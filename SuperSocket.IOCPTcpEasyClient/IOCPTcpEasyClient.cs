@@ -10,7 +10,7 @@ namespace SuperSocket.IOCPEasyClient;
 public class IOCPTcpEasyClient<TPackage, TSendPackage> : IOCPTcpEasyClient<TPackage>, IEasyClient<TPackage, TSendPackage>
     where TPackage : class
 {
-    private IPackageEncoder<TSendPackage> _packageEncoder;
+    private readonly IPackageEncoder<TSendPackage> _packageEncoder;
 
     public IOCPTcpEasyClient(IPipelineFilter<TPackage> pipelineFilter, IPackageEncoder<TSendPackage> packageEncoder, ILogger? logger = null)
         : this(pipelineFilter, packageEncoder, new ChannelOptions { Logger = logger })
@@ -32,11 +32,10 @@ public class IOCPTcpEasyClient<TPackage, TSendPackage> : IOCPTcpEasyClient<TPack
 public class IOCPTcpEasyClient<TPackage> : EasyClient<TPackage>
     where TPackage : class
 {
-    private IPipelineFilter<TPackage> _pipelineFilter;
-
+    private readonly IPipelineFilter<TPackage> _pipelineFilter;
 
     public IOCPTcpEasyClient(IPipelineFilter<TPackage> pipelineFilter)
-        : this(pipelineFilter, logger: null)
+        : this(pipelineFilter, new ChannelOptions())
     {
     }
 
