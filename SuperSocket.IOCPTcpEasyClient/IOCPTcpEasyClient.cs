@@ -15,6 +15,7 @@ public class IOCPTcpEasyClient<TPackage, TSendPackage> : IOCPTcpEasyClient<TPack
     public IOCPTcpEasyClient(IPipelineFilter<TPackage> pipelineFilter, IPackageEncoder<TSendPackage> packageEncoder, ILogger? logger = null)
         : this(pipelineFilter, packageEncoder, new ChannelOptions { Logger = logger })
     {
+        
     }
 
     public IOCPTcpEasyClient(IPipelineFilter<TPackage> pipelineFilter, IPackageEncoder<TSendPackage> packageEncoder, ChannelOptions options)
