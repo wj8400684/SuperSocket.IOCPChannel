@@ -20,16 +20,12 @@ internal sealed class SocketSender : SocketAwaitableEventArgs
     public ValueTask<SocketOperationResult> SendAsync(Socket socket, in ReadOnlySequence<byte> buffers)
     {
         if (buffers.IsSingleSegment)
-        {
             return SendAsync(socket, buffers.First);
-        }
 
         SetBufferList(buffers);
 
         if (socket.SendAsync(this))
-        {
             return new ValueTask<SocketOperationResult>(this, 0);
-        }
 
         var bytesTransferred = BytesTransferred;
         var error = SocketError;
@@ -61,9 +57,7 @@ internal sealed class SocketSender : SocketAwaitableEventArgs
         SetBuffer(MemoryMarshal.AsMemory(memory));
 
         if (socket.SendAsync(this))
-        {
             return new ValueTask<SocketOperationResult>(this, 0);
-        }
 
         var bytesTransferred = BytesTransferred;
         var error = SocketError;
@@ -78,10 +72,7 @@ internal sealed class SocketSender : SocketAwaitableEventArgs
         Debug.Assert(!buffer.IsEmpty);
         Debug.Assert(!buffer.IsSingleSegment);
 
-        if (_bufferList == null)
-        {
-            _bufferList = new List<ArraySegment<byte>>();
-        }
+        _bufferList ??= new List<ArraySegment<byte>>();
 
         foreach (var b in buffer)
         {
