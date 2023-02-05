@@ -28,10 +28,13 @@ public sealed class IOCPTcpPipeChannel<TPackageInfo> : PipeChannel<TPackageInfo>
         base(pipelineFilter, options)
     {
         var socketScheduler = pipeScheduler ?? PipeScheduler.ThreadPool;
-        
+
         _socket = socket;
         _receiver = new SocketReceiver(socketScheduler);
         _socketSenderPool = new SocketSenderPool(socketScheduler);
+        
+        RemoteEndPoint = socket.RemoteEndPoint;
+        LocalEndPoint = socket.LocalEndPoint;
     }
 
     protected override async ValueTask<int> FillPipeWithDataAsync(Memory<byte> memory,
